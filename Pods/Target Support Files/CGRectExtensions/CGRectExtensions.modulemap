@@ -1,0 +1,6 @@
+framework module CGRectExtensions {
+  umbrella header "CGRectExtensions-umbrella.h"
+
+  export *
+  module * { export * }
+}

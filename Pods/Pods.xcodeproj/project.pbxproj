@@ -1,0 +1,693 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A8EE5A1F55081ED9E504A3E6F858061 /* SwiftHEXColors-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CFE96DF41C869B0F363435777AA71D /* SwiftHEXColors-dummy.m */; };
+		2AA795AB22EDEA84AC8BD20291C39732 /* SwiftHEXColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 92F76160EF0D60650AEBD3F22E7ED789 /* SwiftHEXColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3BDC9EC55B00462B19504D84247385CF /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13013764C9A29E0723A471E34EDDBE2A /* Cocoa.framework */; };
+		3C0C7F3B243155794FAEA1CC53495F9F /* Pods-LeapSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CE8D8FBD17A4692F8A9B3A27CD6AC34 /* Pods-LeapSwift-dummy.m */; };
+		55C4D943C9AD2A602495BEC2D1AEF87D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13013764C9A29E0723A471E34EDDBE2A /* Cocoa.framework */; };
+		74C3AB4219A1A4D119AA52E22D355C71 /* Pods-LeapSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABAA6525DA609E29F31B1E39147832CB /* Pods-LeapSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84A962E8D2F6184EA4AC622EBDF9E54E /* CGRectExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BF77FAA9CA97CCC04E671EC0710FE93 /* CGRectExtensions-dummy.m */; };
+		8E01419ADD6DF17B66B847571437E48B /* CGRectExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA74397ED8C078D4B21B2E264DCB448 /* CGRectExtensions.swift */; };
+		98CB346F85D4AD49405D90780F2729F2 /* CGRectExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E44B3BB3A105C84D75046404103B120D /* CGRectExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B583E4724C0E6C82B68488CA77F4C2EF /* SwiftHEXColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D26922D1CA7967D11F6C0A94C89C7A71 /* SwiftHEXColors.swift */; };
+		D1C1DEC3474D949FEA78E657787CFF32 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13013764C9A29E0723A471E34EDDBE2A /* Cocoa.framework */; };
+		D8E508FA16F0B239AC3C133F3B53CBA2 /* SwiftHEXColors-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A51AF3EE3C5D8E782A10597DC28A0A5 /* SwiftHEXColors-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E085AB9158F6373DA52E9644C7862B8B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38259A4F1802719F518A96F324DB7450 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05A2F835B2C33CB0F1C39EB125A4740D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB7677D471F61AA8AEDF62CA61E68439;
+			remoteInfo = CGRectExtensions;
+		};
+		2898DA0ECE8054765503A1CBA092B45B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 27AEC4A82268FE41ACA8A244A2FA08A7;
+			remoteInfo = SwiftHEXColors;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		13013764C9A29E0723A471E34EDDBE2A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		23848D2E6E5ADFF6BBAFF9FD472AC5C5 /* Pods-LeapSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeapSwift.release.xcconfig"; sourceTree = "<group>"; };
+		2CAD00C3C867839FC20231FA19D75058 /* SwiftHEXColors.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftHEXColors.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EA74397ED8C078D4B21B2E264DCB448 /* CGRectExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGRectExtensions.swift; path = CGRectExtensions/CGRectExtensions.swift; sourceTree = "<group>"; };
+		32C76EAABE3B7062360E50A7D3E81C69 /* SwiftHEXColors-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-prefix.pch"; sourceTree = "<group>"; };
+		37A409201B2E6D283BB466F47A5AF942 /* Pods_LeapSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LeapSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38259A4F1802719F518A96F324DB7450 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3EF49F6361186EE68EC2B48BA86BCD64 /* CGRectExtensions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CGRectExtensions.xcconfig; sourceTree = "<group>"; };
+		428BA3819CACE8548D47C72177147BAA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A51AF3EE3C5D8E782A10597DC28A0A5 /* SwiftHEXColors-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftHEXColors-umbrella.h"; sourceTree = "<group>"; };
+		5B6BEDBA3338B0CAAD5F894EC31232C5 /* Pods-LeapSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-LeapSwift.modulemap"; sourceTree = "<group>"; };
+		6BF77FAA9CA97CCC04E671EC0710FE93 /* CGRectExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CGRectExtensions-dummy.m"; sourceTree = "<group>"; };
+		7CE8D8FBD17A4692F8A9B3A27CD6AC34 /* Pods-LeapSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-LeapSwift-dummy.m"; sourceTree = "<group>"; };
+		82CFE96DF41C869B0F363435777AA71D /* SwiftHEXColors-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftHEXColors-dummy.m"; sourceTree = "<group>"; };
+		889912741589847FCA3DB840B67C48FE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		91F65E1768F674C0DF3A0952D6EF1AD0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92F76160EF0D60650AEBD3F22E7ED789 /* SwiftHEXColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftHEXColors.h; path = Sources/SwiftHEXColors.h; sourceTree = "<group>"; };
+		ABAA6525DA609E29F31B1E39147832CB /* Pods-LeapSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-LeapSwift-umbrella.h"; sourceTree = "<group>"; };
+		AD12CAEDF527C70AC2B594921C748E27 /* SwiftHEXColors.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftHEXColors.modulemap; sourceTree = "<group>"; };
+		AFF0409EF3BBBD32637B1C2211699071 /* SwiftHEXColors.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftHEXColors.xcconfig; sourceTree = "<group>"; };
+		B925F8CDA16F7B1844929C84C756445C /* Pods-LeapSwift-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeapSwift-resources.sh"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BCC06B4ADEC413A75743E4654803D4FE /* CGRectExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CGRectExtensions.modulemap; sourceTree = "<group>"; };
+		C800657713748438603755D1C1B51D7D /* Pods-LeapSwift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-LeapSwift-acknowledgements.plist"; sourceTree = "<group>"; };
+		D26922D1CA7967D11F6C0A94C89C7A71 /* SwiftHEXColors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftHEXColors.swift; path = Sources/SwiftHEXColors.swift; sourceTree = "<group>"; };
+		DDBF19E43640CD792CC6C0825FDC6875 /* CGRectExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGRectExtensions-prefix.pch"; sourceTree = "<group>"; };
+		E44B3BB3A105C84D75046404103B120D /* CGRectExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CGRectExtensions-umbrella.h"; sourceTree = "<group>"; };
+		E8B5949CC9288902AAF583984786A3CC /* Pods-LeapSwift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-LeapSwift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB3C2240AFD2ED6783AA755574F4D2E7 /* CGRectExtensions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CGRectExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBA4882D9DA576D3B2614D2370886B74 /* Pods-LeapSwift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-LeapSwift-frameworks.sh"; sourceTree = "<group>"; };
+		FD498720DC2DF7FEB248B0B7C5B7EE08 /* Pods-LeapSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-LeapSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F02CADE89B93467E77E30767C5B40D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55C4D943C9AD2A602495BEC2D1AEF87D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E3782AE949BD884E2E3DAD8B37CB1FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1C1DEC3474D949FEA78E657787CFF32 /* Cocoa.framework in Frameworks */,
+				E085AB9158F6373DA52E9644C7862B8B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E606E37A161C25F478EA2A66237798C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDC9EC55B00462B19504D84247385CF /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16AEA48015E5969790AA7229DA05B9B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BCC06B4ADEC413A75743E4654803D4FE /* CGRectExtensions.modulemap */,
+				3EF49F6361186EE68EC2B48BA86BCD64 /* CGRectExtensions.xcconfig */,
+				6BF77FAA9CA97CCC04E671EC0710FE93 /* CGRectExtensions-dummy.m */,
+				DDBF19E43640CD792CC6C0825FDC6875 /* CGRectExtensions-prefix.pch */,
+				E44B3BB3A105C84D75046404103B120D /* CGRectExtensions-umbrella.h */,
+				889912741589847FCA3DB840B67C48FE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CGRectExtensions";
+			sourceTree = "<group>";
+		};
+		2459357A385A19CD70A58AA8E65CACA5 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6871C6CEE31692B72C505F10A63ABA8 /* Pods-LeapSwift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		46D2E572B7404B07F95A7626882F4AA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB3C2240AFD2ED6783AA755574F4D2E7 /* CGRectExtensions.framework */,
+				37A409201B2E6D283BB466F47A5AF942 /* Pods_LeapSwift.framework */,
+				2CAD00C3C867839FC20231FA19D75058 /* SwiftHEXColors.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79ED374202356228B16B20B5FAF29359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				806EAD9821293CCB949D4428EA279F13 /* CGRectExtensions */,
+				F813745D7B0CABFD36514F325E3E9BAA /* SwiftHEXColors */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */,
+				79ED374202356228B16B20B5FAF29359 /* Pods */,
+				46D2E572B7404B07F95A7626882F4AA1 /* Products */,
+				2459357A385A19CD70A58AA8E65CACA5 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		806EAD9821293CCB949D4428EA279F13 /* CGRectExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				2EA74397ED8C078D4B21B2E264DCB448 /* CGRectExtensions.swift */,
+				16AEA48015E5969790AA7229DA05B9B1 /* Support Files */,
+			);
+			path = CGRectExtensions;
+			sourceTree = "<group>";
+		};
+		8FACB6C97C8E3B62C409857FFC7F3BE6 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				91F65E1768F674C0DF3A0952D6EF1AD0 /* Info.plist */,
+				AD12CAEDF527C70AC2B594921C748E27 /* SwiftHEXColors.modulemap */,
+				AFF0409EF3BBBD32637B1C2211699071 /* SwiftHEXColors.xcconfig */,
+				82CFE96DF41C869B0F363435777AA71D /* SwiftHEXColors-dummy.m */,
+				32C76EAABE3B7062360E50A7D3E81C69 /* SwiftHEXColors-prefix.pch */,
+				4A51AF3EE3C5D8E782A10597DC28A0A5 /* SwiftHEXColors-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftHEXColors";
+			sourceTree = "<group>";
+		};
+		A6871C6CEE31692B72C505F10A63ABA8 /* Pods-LeapSwift */ = {
+			isa = PBXGroup;
+			children = (
+				428BA3819CACE8548D47C72177147BAA /* Info.plist */,
+				5B6BEDBA3338B0CAAD5F894EC31232C5 /* Pods-LeapSwift.modulemap */,
+				E8B5949CC9288902AAF583984786A3CC /* Pods-LeapSwift-acknowledgements.markdown */,
+				C800657713748438603755D1C1B51D7D /* Pods-LeapSwift-acknowledgements.plist */,
+				7CE8D8FBD17A4692F8A9B3A27CD6AC34 /* Pods-LeapSwift-dummy.m */,
+				FBA4882D9DA576D3B2614D2370886B74 /* Pods-LeapSwift-frameworks.sh */,
+				B925F8CDA16F7B1844929C84C756445C /* Pods-LeapSwift-resources.sh */,
+				ABAA6525DA609E29F31B1E39147832CB /* Pods-LeapSwift-umbrella.h */,
+				FD498720DC2DF7FEB248B0B7C5B7EE08 /* Pods-LeapSwift.debug.xcconfig */,
+				23848D2E6E5ADFF6BBAFF9FD472AC5C5 /* Pods-LeapSwift.release.xcconfig */,
+			);
+			name = "Pods-LeapSwift";
+			path = "Target Support Files/Pods-LeapSwift";
+			sourceTree = "<group>";
+		};
+		D3231B1AB8A6FE7C4A23148088E06A4E /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				13013764C9A29E0723A471E34EDDBE2A /* Cocoa.framework */,
+				38259A4F1802719F518A96F324DB7450 /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		D648CE86F139C7CCFD55D5B8A03BE74B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3231B1AB8A6FE7C4A23148088E06A4E /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F813745D7B0CABFD36514F325E3E9BAA /* SwiftHEXColors */ = {
+			isa = PBXGroup;
+			children = (
+				92F76160EF0D60650AEBD3F22E7ED789 /* SwiftHEXColors.h */,
+				D26922D1CA7967D11F6C0A94C89C7A71 /* SwiftHEXColors.swift */,
+				8FACB6C97C8E3B62C409857FFC7F3BE6 /* Support Files */,
+			);
+			path = SwiftHEXColors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		25318A1184492A20BE2E0E790E591D52 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98CB346F85D4AD49405D90780F2729F2 /* CGRectExtensions-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D84B9E6A8A4C726BAAC90EB06046E50 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74C3AB4219A1A4D119AA52E22D355C71 /* Pods-LeapSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E53A86357C6E43D4A0822182120BDB14 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E508FA16F0B239AC3C133F3B53CBA2 /* SwiftHEXColors-umbrella.h in Headers */,
+				2AA795AB22EDEA84AC8BD20291C39732 /* SwiftHEXColors.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		074FED0DD0D6E2B5AFF37FFE7669C0E4 /* Pods-LeapSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF541A66A0E77C493974B795FDA3396D /* Build configuration list for PBXNativeTarget "Pods-LeapSwift" */;
+			buildPhases = (
+				62E02DF24B85102601C4B1BFEA7A2868 /* Sources */,
+				E606E37A161C25F478EA2A66237798C1 /* Frameworks */,
+				4D84B9E6A8A4C726BAAC90EB06046E50 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7C825636AA24E0B6874DD00369C18D7E /* PBXTargetDependency */,
+				2C736CA427681B09030460981D3C6A9B /* PBXTargetDependency */,
+			);
+			name = "Pods-LeapSwift";
+			productName = "Pods-LeapSwift";
+			productReference = 37A409201B2E6D283BB466F47A5AF942 /* Pods_LeapSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		27AEC4A82268FE41ACA8A244A2FA08A7 /* SwiftHEXColors */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11FB801A749AA38F5126F7083E81216C /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */;
+			buildPhases = (
+				18E6A976180F4AA1D34C8EE06B963E2E /* Sources */,
+				3F02CADE89B93467E77E30767C5B40D8 /* Frameworks */,
+				E53A86357C6E43D4A0822182120BDB14 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftHEXColors;
+			productName = SwiftHEXColors;
+			productReference = 2CAD00C3C867839FC20231FA19D75058 /* SwiftHEXColors.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AB7677D471F61AA8AEDF62CA61E68439 /* CGRectExtensions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A0E778195D9876E57FEEB3EB54E4BE2 /* Build configuration list for PBXNativeTarget "CGRectExtensions" */;
+			buildPhases = (
+				655E9C94905BA522D77E29DD247C0E5E /* Sources */,
+				7E3782AE949BD884E2E3DAD8B37CB1FB /* Frameworks */,
+				25318A1184492A20BE2E0E790E591D52 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CGRectExtensions;
+			productName = CGRectExtensions;
+			productReference = EB3C2240AFD2ED6783AA755574F4D2E7 /* CGRectExtensions.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 46D2E572B7404B07F95A7626882F4AA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AB7677D471F61AA8AEDF62CA61E68439 /* CGRectExtensions */,
+				074FED0DD0D6E2B5AFF37FFE7669C0E4 /* Pods-LeapSwift */,
+				27AEC4A82268FE41ACA8A244A2FA08A7 /* SwiftHEXColors */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18E6A976180F4AA1D34C8EE06B963E2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A8EE5A1F55081ED9E504A3E6F858061 /* SwiftHEXColors-dummy.m in Sources */,
+				B583E4724C0E6C82B68488CA77F4C2EF /* SwiftHEXColors.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62E02DF24B85102601C4B1BFEA7A2868 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C0C7F3B243155794FAEA1CC53495F9F /* Pods-LeapSwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		655E9C94905BA522D77E29DD247C0E5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84A962E8D2F6184EA4AC622EBDF9E54E /* CGRectExtensions-dummy.m in Sources */,
+				8E01419ADD6DF17B66B847571437E48B /* CGRectExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2C736CA427681B09030460981D3C6A9B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftHEXColors;
+			target = 27AEC4A82268FE41ACA8A244A2FA08A7 /* SwiftHEXColors */;
+			targetProxy = 2898DA0ECE8054765503A1CBA092B45B /* PBXContainerItemProxy */;
+		};
+		7C825636AA24E0B6874DD00369C18D7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CGRectExtensions;
+			target = AB7677D471F61AA8AEDF62CA61E68439 /* CGRectExtensions */;
+			targetProxy = 05A2F835B2C33CB0F1C39EB125A4740D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		141E72715AD4FC82CF54012E38E121A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF49F6361186EE68EC2B48BA86BCD64 /* CGRectExtensions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CGRectExtensions/CGRectExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CGRectExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/CGRectExtensions/CGRectExtensions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = CGRectExtensions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E8805E65AE589843D691557FF1962F0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23848D2E6E5ADFF6BBAFF9FD472AC5C5 /* Pods-LeapSwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LeapSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeapSwift/Pods-LeapSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LeapSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4907EAB0868E73CCC72FCDDB6921349C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69C012360A4D0A1DA8FA7EB6E8924B17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		95BAF415A290D6FCF6EED35778EBD10D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EF49F6361186EE68EC2B48BA86BCD64 /* CGRectExtensions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/CGRectExtensions/CGRectExtensions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CGRectExtensions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/CGRectExtensions/CGRectExtensions.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = CGRectExtensions;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AD26154BD634E46370C52B103369E90D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF0409EF3BBBD32637B1C2211699071 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E24774A149906FA6A9DC1E97885742B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD498720DC2DF7FEB248B0B7C5B7EE08 /* Pods-LeapSwift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-LeapSwift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/Pods-LeapSwift/Pods-LeapSwift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_LeapSwift;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F4032A337D96F6CA8B7A18156B59B05C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFF0409EF3BBBD32637B1C2211699071 /* SwiftHEXColors.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftHEXColors/SwiftHEXColors-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftHEXColors/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/SwiftHEXColors/SwiftHEXColors.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SwiftHEXColors;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A0E778195D9876E57FEEB3EB54E4BE2 /* Build configuration list for PBXNativeTarget "CGRectExtensions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				141E72715AD4FC82CF54012E38E121A7 /* Debug */,
+				95BAF415A290D6FCF6EED35778EBD10D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11FB801A749AA38F5126F7083E81216C /* Build configuration list for PBXNativeTarget "SwiftHEXColors" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD26154BD634E46370C52B103369E90D /* Debug */,
+				F4032A337D96F6CA8B7A18156B59B05C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69C012360A4D0A1DA8FA7EB6E8924B17 /* Debug */,
+				4907EAB0868E73CCC72FCDDB6921349C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF541A66A0E77C493974B795FDA3396D /* Build configuration list for PBXNativeTarget "Pods-LeapSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E24774A149906FA6A9DC1E97885742B7 /* Debug */,
+				1E8805E65AE589843D691557FF1962F0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

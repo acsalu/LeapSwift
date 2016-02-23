@@ -1,0 +1,15 @@
+PODS:
+  - CGRectExtensions (2.0)
+  - SwiftHEXColors (1.0.2)
+
+DEPENDENCIES:
+  - CGRectExtensions
+  - SwiftHEXColors
+
+SPEC CHECKSUMS:
+  CGRectExtensions: 67fa367a91d537bc2fcdd97069a66262777d1412
+  SwiftHEXColors: 1238ce6ee5c698ef9caf00fad72876602ecd9df6
+
+PODFILE CHECKSUM: 36514b50cfc0c36c72b42dd33bc5d73724e71b9f
+
+COCOAPODS: 1.0.0.beta.3
