@@ -69,12 +69,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         window.delegate = self;
     }
 
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-
     // IBActions
     @IBAction func updateButtonPressed(sender: NSButton) {
         self.updateStage()
@@ -173,7 +167,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     
     func updateStatus(status: String) {
         print(status)
-//        self.deviceStatus.stringValue = "Status: \(status)"
     }
 
     func onInit(notification: NSNotification!) {
@@ -219,13 +212,10 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         self.handCount.stringValue = "hands: \(frame.hands.count)"
         
         let event = CGEventCreate(nil);
-        let currentMouseLocation = CGEventGetLocation(event);
-        
-//        print("Current: \(currentMouseLocation)")
+        let currentMouseLocation = CGEventGetLocation(event)
         
         if let mouseDiff = self.transformer.transformFrame(frame) {
             let mouseWarpLocation = CGPointMake(currentMouseLocation.x + mouseDiff.x, currentMouseLocation.y + mouseDiff.y)
-//            print("New: \(mouseWarpLocation)")
             let eventSource = CGEventSourceCreate(.CombinedSessionState)
             CGEventSourceSetLocalEventsSuppressionInterval(eventSource, 0.0)
             CGAssociateMouseAndMouseCursorPosition(0)
@@ -237,7 +227,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     // MARK: - Key Events
     
     override func keyDown(event: NSEvent) {
-//        print("keyDown: \(event.keyCode)")
         if event.keyCode == 49 {
             let event = CGEventCreate(nil);
             let cursor = CGEventGetLocation(event);
@@ -254,7 +243,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     }
     
     override func keyUp(event: NSEvent) {
-//        print("keyUP: \(event.keyCode)")
         if event.keyCode == 49 {
             let event = CGEventCreate(nil);
             let cursor = CGEventGetLocation(event);
