@@ -705,7 +705,7 @@
                                             </textField>
                                             <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiB-hI-yA5">
                                                 <rect key="frame" x="-2" y="-2" width="144" height="26"/>
-                                                <sliderCell key="cell" alignment="left" minValue="0.59999999999999998" maxValue="0.90000000000000002" doubleValue="0.59999999999999998" tickMarkPosition="above" numberOfTickMarks="3" allowsTickMarkValuesOnly="YES" sliderType="linear" id="BGm-o3-eQV"/>
+                                                <sliderCell key="cell" alignment="left" minValue="0.69999999999999996" maxValue="0.90000000000000002" doubleValue="0.69999999999999996" tickMarkPosition="above" numberOfTickMarks="2" allowsTickMarkValuesOnly="YES" sliderType="linear" id="BGm-o3-eQV"/>
                                             </slider>
                                         </subviews>
                                         <visibilityPriorities>
@@ -721,8 +721,8 @@
                                         <rect key="frame" x="0.0" y="29" width="140" height="49"/>
                                         <subviews>
                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-WN-y9X">
-                                                <rect key="frame" x="-2" y="32" width="69" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Width (W)" id="PKq-IF-E4D">
+                                                <rect key="frame" x="-2" y="32" width="94" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Amplitude (A)" id="PKq-IF-E4D">
                                                     <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -733,7 +733,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="wT0-ht-w4B"/>
                                                 </constraints>
-                                                <sliderCell key="cell" state="on" alignment="left" minValue="10" maxValue="26" doubleValue="26" tickMarkPosition="above" numberOfTickMarks="3" allowsTickMarkValuesOnly="YES" sliderType="linear" id="P42-mz-iZI"/>
+                                                <sliderCell key="cell" state="on" alignment="left" minValue="18" maxValue="28" doubleValue="18" tickMarkPosition="above" numberOfTickMarks="2" allowsTickMarkValuesOnly="YES" sliderType="linear" id="P42-mz-iZI"/>
                                             </slider>
                                         </subviews>
                                         <visibilityPriorities>
