@@ -94,7 +94,28 @@ class FingerTransformer: BaseTransformer {
             if hand.isRight == self.isRightHand {
                 for finger in hand.fingers as! [LeapFinger] {
                     if finger.type == LeapFingerType.init(fingerIndex) {
-                        return self.transformCoordinate(finger.stabilizedTipPosition)
+                        
+                        let velocity = LeapVector(vector: finger.tipVelocity)
+                        velocity.z = 0.0
+                        
+                        var newMagnitude: Float!
+                        
+                        if velocity.magnitude <= 20.0 {
+                            
+                            newMagnitude = velocity.magnitude * 0.01
+                            
+                        } else if velocity.magnitude < 200.0 {
+                            
+                            newMagnitude = 2.0 + (velocity.magnitude - 2.0) * 0.05
+                            
+                        } else {
+                            newMagnitude = 11.9 + (velocity.magnitude - 11.9) * 0.1
+                        }
+                        
+                        let scale = newMagnitude / velocity.magnitude
+                        
+                        let diff = CGPointMake(CGFloat(finger.tipVelocity.x * scale), -CGFloat(finger.tipVelocity.y * scale))
+                        return diff
                     }
                 }
             }

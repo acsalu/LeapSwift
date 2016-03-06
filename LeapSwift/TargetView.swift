@@ -9,7 +9,7 @@
 import Cocoa
 
 protocol TargetViewDelegate {
-    func targetViewDidSelect(targetView: TargetView)
+    func targetViewDidSelect(target: TargetView, atLocation: NSPoint)
 }
 
 class TargetView: NSControl {
@@ -26,12 +26,17 @@ class TargetView: NSControl {
         }
     }
     
+    var center: CGPoint {
+        get {
+            return CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame))
+        }
+    }
+    
     var delegate: TargetViewDelegate!
     
     override init(frame frameRect: NSRect) {
         super.init(frame: frameRect)
         let options: NSTrackingAreaOptions = [.ActiveAlways, .MouseEnteredAndExited]
-        Swift.print("tracking area \(frameRect)")
         let trackingArea = NSTrackingArea.init(
             rect: frameRect,
             options: options,
@@ -74,7 +79,7 @@ class TargetView: NSControl {
     
     override func mouseDown(theEvent: NSEvent) {
         if self.delegate != nil {
-            self.delegate.targetViewDidSelect(self)
+            self.delegate.targetViewDidSelect(self, atLocation: theEvent.locationInWindow)
         }
     }
     

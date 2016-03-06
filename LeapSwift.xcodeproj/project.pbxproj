@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B62C4BDA0BAAAA45469B126 /* Pods_LeapSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3FFA4F22F69FA8A6602A878 /* Pods_LeapSwift.framework */; };
+		900059D01C8B8AD000E689DF /* CGPointExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900059CF1C8B8AD000E689DF /* CGPointExtensions.swift */; };
 		9063B5761C79072400518EB0 /* LeapTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9063B5751C79072400518EB0 /* LeapTransformer.swift */; };
 		9077B3F31C7B5D89005107D7 /* FittsTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9077B3F21C7B5D89005107D7 /* FittsTask.swift */; };
 		908558D91C76BB8400046714 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908558D81C76BB8400046714 /* CoreGraphics.framework */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		2559805583F339CA722DE0EC /* Pods-LeapSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LeapSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LeapSwift/Pods-LeapSwift.debug.xcconfig"; sourceTree = "<group>"; };
+		900059CF1C8B8AD000E689DF /* CGPointExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointExtensions.swift; sourceTree = "<group>"; };
 		9063B5751C79072400518EB0 /* LeapTransformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeapTransformer.swift; sourceTree = "<group>"; };
 		9077B3F21C7B5D89005107D7 /* FittsTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FittsTask.swift; sourceTree = "<group>"; };
 		908558D81C76BB8400046714 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -130,6 +132,7 @@
 				9093EDDA1C6AE64D005C7C70 /* Assets.xcassets */,
 				9093EDDC1C6AE64D005C7C70 /* Main.storyboard */,
 				9093EDDF1C6AE64D005C7C70 /* Info.plist */,
+				900059CF1C8B8AD000E689DF /* CGPointExtensions.swift */,
 			);
 			path = LeapSwift;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				9063B5761C79072400518EB0 /* LeapTransformer.swift in Sources */,
 				9093EDD91C6AE64D005C7C70 /* ViewController.swift in Sources */,
 				9093EDD71C6AE64D005C7C70 /* AppDelegate.swift in Sources */,
+				900059D01C8B8AD000E689DF /* CGPointExtensions.swift in Sources */,
 				90FE5D121C77BEF50098B33C /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

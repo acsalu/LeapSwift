@@ -15,7 +15,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
 
     var controller: LeapController!
     
-    @IBOutlet weak var deviceStatus: NSTextField!
     @IBOutlet weak var handCount: NSTextField!
     
     @IBOutlet weak var stage: NSView!
@@ -23,15 +22,11 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     @IBOutlet weak var distanceSlider: NSSlider!
     @IBOutlet weak var widthSlider: NSSlider!
     
-    var transformer: BaseTransformer?
-    
-    let palmTransformer = PalmTransformer.init(isRightHand: true)
-    let fingerTransformer = FingerTransformer.init(isRightHand: true, fingerIndex: 1)
-    let fingerXZTransformer = FingerXZTransformer.init(isRightHand: true, fingerIndex: 1)
+    var transformer: BaseTransformer = FingerTransformer.init(isRightHand: true, fingerIndex: 1)
     
     var targets: [TargetView]!
     
-    var testProgress: Int?
+    var testIndex: Int = 0
     var testOrder: [Int]!
     
     let fittsTask = FittsTask()
@@ -53,7 +48,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         super.viewDidLoad()
         
         self.controller = LeapController.init(listener: self)
-        self.transformer = palmTransformer
         
         NSEvent.addLocalMonitorForEventsMatchingMask(.KeyDownMask) { (aEvent) -> NSEvent? in
             self.keyDown(aEvent)
@@ -86,22 +80,8 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         self.updateStage()
     }
     
-    @IBAction func leapModeDidChange(sender: NSSegmentedControl) {
-        switch sender.selectedSegment {
-        case 0:
-            self.transformer = palmTransformer
-        case 1:
-            self.transformer = fingerTransformer
-        case 2:
-            self.transformer = fingerXZTransformer
-        default:
-            break
-        }
-    }
-    
-    
     func resetStage() {
-        testProgress = nil
+        testIndex = 0
         testOrder = [0]
         var odd = 13
         var even = 1
@@ -127,7 +107,7 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     func updateStage() {
         self.resetStage()
         self.registerTargetsWithDistance(self.radius * 2.0, andWidth: self.targetSize)
-        self.promptNextTarget()
+        self.promptTarget()
     }
     
     func registerTargetsWithDistance(distance: CGFloat, andWidth width: CGFloat) {
@@ -163,35 +143,37 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         }
     }
     
-    func promptNextTarget() {
-        if self.testProgress != nil {
-            targets[testOrder[self.testProgress!]].prompted = false
-            ++testProgress!
-        } else {
-            testProgress = 0
+    func promptTarget() {
+        targets.map { target -> Void in
+            target.prompted = false
         }
-
-        if let index = testProgress {
-            if index < testOrder.count {
-                targets[testOrder[index]].prompted = true
-            }
-        }
+        targets[testOrder[testIndex]].prompted = true
     }
     
     // MARK: - TargetViewDelegate methods
     
-    func targetViewDidSelect(targetView: TargetView) {
+    func targetViewDidSelect(target: TargetView, atLocation location: NSPoint) {
         
-        if targetView.tag == self.testOrder[testProgress!] {
-            targetView.selected = true
-            self.promptNextTarget()
+        guard testIndex < self.testOrder.count else {
+            return
+        }
+        
+        if target.tag == self.testOrder[testIndex] {
+            print("tag: \(target.tag) center: \(target.center) mouse: \(location)")
+            fittsTask.setSelectPointForCurrentTrial(location)
+            target.selected = true
+            ++testIndex
             
-            if testProgress! == self.testOrder.count {
-                print("D: \(self.radius * 2.0), W: \(self.targetSize * 2.0)")
+            if testIndex == self.testOrder.count {
+                print("finish!")
                 fittsTask.finish()
+                
             } else {
-                fittsTask.startNewSubTask()
+                fittsTask.startNextTrial(fromTarget: targets[testOrder[testIndex - 1]], toTarget: targets[testOrder[testIndex]])
+                promptTarget()
             }
+        } else {
+            fittsTask.addClickCountToCurrentTrial()
         }
     }
     
@@ -199,7 +181,7 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     
     func updateStatus(status: String) {
         print(status)
-        self.deviceStatus.stringValue = "Status: \(status)"
+//        self.deviceStatus.stringValue = "Status: \(status)"
     }
 
     func onInit(notification: NSNotification!) {
@@ -235,6 +217,8 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         self.updateStatus("Exited")
     }
     
+    var lastFrame: LeapFrame?
+    
     func onFrame(notification: NSNotification!) {
         let controller = notification.object as! LeapController
         let frame = controller.frame(0)
@@ -242,7 +226,14 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         
         self.handCount.stringValue = "hands: \(frame.hands.count)"
         
-        if let mouseWarpLocation = self.transformer?.transformFrame(frame) {
+        let event = CGEventCreate(nil);
+        let currentMouseLocation = CGEventGetLocation(event);
+        
+//        print("Current: \(currentMouseLocation)")
+        
+        if let mouseDiff = self.transformer.transformFrame(frame) {
+            let mouseWarpLocation = CGPointMake(currentMouseLocation.x + mouseDiff.x, currentMouseLocation.y + mouseDiff.y)
+//            print("New: \(mouseWarpLocation)")
             let eventSource = CGEventSourceCreate(.CombinedSessionState)
             CGEventSourceSetLocalEventsSuppressionInterval(eventSource, 0.0)
             CGAssociateMouseAndMouseCursorPosition(0)
@@ -264,6 +255,10 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
             CGEventPost(CGEventTapLocation.CGHIDEventTap, clickDown)
         }
         super.keyDown(event)
+    }
+    
+    override func mouseDown(theEvent: NSEvent) {
+        self.fittsTask.addClickCountToCurrentTrial()
     }
     
     override func keyUp(event: NSEvent) {
