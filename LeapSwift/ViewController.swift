@@ -29,7 +29,7 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     var testIndex: Int = 0
     var testOrder: [Int]!
     
-    let fittsTask = FittsTask()
+    var fittsTask: FittsTask!
     
     var radius: CGFloat {
         get {
@@ -80,7 +80,21 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         self.updateStage()
     }
     
-    func resetStage() {
+    func updateStage() {
+        self.clearStage()
+        self.initializeStage()
+    }
+    
+    func clearStage() {
+        self.stage.layer?.sublayers?.removeAll()
+        for subview in self.view.subviews {
+            if let target = subview as? TargetView {
+                target.removeFromSuperview()
+            }
+        }
+    }
+    
+    func initializeStage() {
         testIndex = 0
         testOrder = [0]
         var odd = 13
@@ -94,20 +108,21 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         }
         testOrder.append(0)
         
-        self.stage.layer?.sublayers?.removeAll()
-        for subview in self.view.subviews {
-            if let target = subview as? TargetView {
-                target.removeFromSuperview()
-            }
-        }
         self.targets = [TargetView]()
-        self.fittsTask.clear()
+        
+        self.registerTargetsWithDistance(self.radius * 2.0, andWidth: self.targetSize)
+        self.setUpTrials()
     }
     
-    func updateStage() {
-        self.resetStage()
-        self.registerTargetsWithDistance(self.radius * 2.0, andWidth: self.targetSize)
-        self.promptTarget()
+    func setUpTrials() {
+        print("Set up trials...")
+        self.fittsTask = FittsTask()
+        
+        for i in 0...24 {
+            fittsTask.addTrial(fromTarget: targets[testOrder[i]], toTarget: targets[testOrder[i + 1]])
+        }
+        
+        self.fittsTask.state = .Before
     }
     
     func registerTargetsWithDistance(distance: CGFloat, andWidth width: CGFloat) {
@@ -119,7 +134,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         baseCircleOutlineLayer.borderWidth = 1.0
         baseCircleOutlineLayer.cornerRadius = radius
         baseCircleOutlineLayer.position = CGPointMake((self.stage.layer?.bounds.width)! / 2, (self.stage.layer?.bounds.height)! / 2)
-//        self.stage.layer?.addSublayer(baseCircleOutlineLayer)
         
         let targetSize: CGFloat = width
         let center = CGPointMake((self.stage.layer?.bounds.width)! / 2, (self.stage.layer?.bounds.height)! / 2)
@@ -131,8 +145,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
             let x = center.x + dx - targetSize + stage.frame.origin.x
             let y = center.y + dy - targetSize + stage.frame.origin.y
             
-            print("\(i) \(x) \(y)")
-            
             let target = TargetView.init(frame: CGRectMake(x, y, targetSize * 2, targetSize * 2))
             target.tag = i
             target.delegate = self
@@ -143,37 +155,17 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
         }
     }
     
-    func promptTarget() {
-        targets.map { target -> Void in
-            target.prompted = false
-        }
-        targets[testOrder[testIndex]].prompted = true
-    }
-    
     // MARK: - TargetViewDelegate methods
     
     func targetViewDidSelect(target: TargetView, atLocation location: NSPoint) {
-        
-        guard testIndex < self.testOrder.count else {
-            return
-        }
-        
-        if target.tag == self.testOrder[testIndex] {
-            print("tag: \(target.tag) center: \(target.center) mouse: \(location)")
-            fittsTask.setSelectPointForCurrentTrial(location)
-            target.selected = true
-            ++testIndex
-            
-            if testIndex == self.testOrder.count {
-                print("finish!")
-                fittsTask.finish()
-                
+        if let currentTarget = fittsTask.currentTarget {
+            if currentTarget == target {
+                fittsTask.stepOverWithLocation(location)
             } else {
-                fittsTask.startNextTrial(fromTarget: targets[testOrder[testIndex - 1]], toTarget: targets[testOrder[testIndex]])
-                promptTarget()
+                fittsTask.addClickCountToCurrentTrial()
             }
         } else {
-            fittsTask.addClickCountToCurrentTrial()
+            fittsTask.stepOverWithLocation(location)
         }
     }
     
@@ -275,9 +267,6 @@ class ViewController: NSViewController, LeapListener, TargetViewDelegate, NSWind
     }
     
     // MARK: - NSWindowDelegate methods
-    func windowWillEnterFullScreen(notification: NSNotification) {
-        self.resetStage()
-    }
     
     func windowDidEnterFullScreen(notification: NSNotification) {
         self.updateStage()

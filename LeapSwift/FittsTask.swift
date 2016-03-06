@@ -9,13 +9,70 @@
 import Foundation
 import CGRectExtensions
 
+enum TaskState {
+    case None, Before, During, End
+}
+
 class FittsTask {
     
     // MARK: - Stored Properties
     var trials = [Trial]()
+    var numberOfTrialsCompleted: Int!
+    var state: TaskState = .None {
+        didSet {
+            switch self.state {
+            case .Before:
+                let trial = trials[0]
+                trial.fromTarget.prompted = true
+            case .During:
+                let trial = trials[numberOfTrialsCompleted]
+                trial.fromTarget.prompted = false
+                trial.toTarget.prompted = true
+                if let lastTrial = lastTrial {
+                    lastTrial.stop()
+                }
+                trial.start()
+            case .End:
+                if let lastTrial = lastTrial {
+                    lastTrial.stop()
+                }
+                finish()
+            case .None:
+                break
+            }
+        }
+    }
     
     // MARK: - Computed Properties
-    var averageMovementTime: NSTimeInterval {
+    var currentTarget: TargetView? {
+        get {
+            if state == .During {
+                return trials[numberOfTrialsCompleted!].toTarget
+            }
+            
+            return nil
+        }
+    }
+    
+    var lastTrial: Trial? {
+        get {
+            if state == .End {
+                return trials.last!
+            }
+            
+            guard state == .During else {
+                return nil
+            }
+            
+            guard numberOfTrialsCompleted > 0 else {
+                return nil
+            }
+            
+            return trials[numberOfTrialsCompleted - 1]
+        }
+    }
+    
+    var meanMovementTime: NSTimeInterval {
         get {
             return self.trials.reduce(0.0) {
                 (duration: NSTimeInterval, trial: Trial) -> NSTimeInterval in
@@ -38,10 +95,9 @@ class FittsTask {
         }
     }
     
-    // TODO:
-    var throughput: Float {
+    var throughput: Double {
         get {
-            return 0.0
+            return Double(log(effectiveAmplitude / (4.133 * standardDeviationOfDx) + 1)) / meanMovementTime
         }
     }
     
@@ -75,15 +131,33 @@ class FittsTask {
     
     
     // MARK: - Trial Control Methods
-    func startNextTrial(fromTarget from: TargetView, toTarget to: TargetView) {
-        
-        if !self.trials.isEmpty {
-            self.trials.last!.stop()
+    func stepOverWithLocation(location: NSPoint) {
+        switch self.state {
+        case .Before:
+            numberOfTrialsCompleted = 0
+            self.state = .During
+        case .During:
+            numberOfTrialsCompleted = numberOfTrialsCompleted + 1
+            
+            if let lastTrial = lastTrial {
+                lastTrial.select = location
+            }
+            
+            if numberOfTrialsCompleted == self.trials.count {
+                self.state = .End
+            } else {
+                self.state = .During
+            }
+        case .End: break
+        case .None: break
         }
-        
+    }
+    
+    
+    
+    func addTrial(fromTarget from: TargetView, toTarget to: TargetView) {
         let trial = Trial.init(fromTarget: from, toTarget: to)
         self.trials.append(trial)
-        trial.start()
     }
     
     func finish() {
@@ -97,10 +171,11 @@ class FittsTask {
         print("Finish Fitts Task")
         print("\(self.trials.count) trials")
         print("\(self.numberOfClicks) clicks")
-        print("Average MT: \(averageMovementTime)")
+        print("Average MT: \(meanMovementTime)")
         print("Accuracy: \(accuracy)")
         print("Effective Amplitude: \(effectiveAmplitude)")
         print("Standard Deviation of dx: \(standardDeviationOfDx)")
+        print("Throughput: \(throughput)")
     }
     
     func clear() {
@@ -126,6 +201,9 @@ class FittsTask {
 
 class Trial {
     
+    let fromTarget: TargetView
+    let toTarget: TargetView
+    
     let from: CGPoint
     let to: CGPoint
     var select: CGPoint!
@@ -135,11 +213,7 @@ class Trial {
     var elapsedTime: NSTimeInterval!
     var numberOfClicks: Int = 1
     
-    
-    
-    // TODO:
     var dx: CGFloat {
-        
         get {
             let a = from.distanceToPoint(to)
             let b = select.distanceToPoint(to)
@@ -150,6 +224,8 @@ class Trial {
     }
     
     init(fromTarget: TargetView, toTarget: TargetView) {
+        self.fromTarget = fromTarget
+        self.toTarget = toTarget
         self.from = fromTarget.center
         self.to = toTarget.center
     }
