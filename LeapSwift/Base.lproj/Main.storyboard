@@ -690,21 +690,21 @@
                                 </constraints>
                             </customView>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mDa-Zt-pGN">
-                                <rect key="frame" x="839" y="430" width="140" height="135"/>
+                                <rect key="frame" x="839" y="432" width="140" height="133"/>
                                 <subviews>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6H-0I-Gtp">
-                                        <rect key="frame" x="0.0" y="86" width="140" height="49"/>
+                                        <rect key="frame" x="0.0" y="85" width="140" height="48"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zea-tF-63D">
-                                                <rect key="frame" x="-2" y="32" width="84" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Distance (D)" id="poe-LT-2Zl">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zea-tF-63D">
+                                                <rect key="frame" x="-2" y="31" width="94" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Amplitude (A)" id="poe-LT-2Zl">
                                                     <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
                                             <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hiB-hI-yA5">
-                                                <rect key="frame" x="-2" y="-2" width="144" height="26"/>
+                                                <rect key="frame" x="-2" y="-2" width="144" height="25"/>
                                                 <sliderCell key="cell" alignment="left" minValue="0.69999999999999996" maxValue="0.90000000000000002" doubleValue="0.69999999999999996" tickMarkPosition="above" numberOfTickMarks="2" allowsTickMarkValuesOnly="YES" sliderType="linear" id="BGm-o3-eQV"/>
                                             </slider>
                                         </subviews>
@@ -718,18 +718,18 @@
                                         </customSpacing>
                                     </stackView>
                                     <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" misplaced="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V59-Nj-hnk">
-                                        <rect key="frame" x="0.0" y="29" width="140" height="49"/>
+                                        <rect key="frame" x="0.0" y="29" width="140" height="48"/>
                                         <subviews>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-WN-y9X">
-                                                <rect key="frame" x="-2" y="32" width="94" height="17"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Amplitude (A)" id="PKq-IF-E4D">
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vtm-WN-y9X">
+                                                <rect key="frame" x="-2" y="31" width="69" height="17"/>
+                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Width (W)" id="PKq-IF-E4D">
                                                     <font key="font" metaFont="systemBold"/>
                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                 </textFieldCell>
                                             </textField>
-                                            <slider verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jpo-P8-bAF">
-                                                <rect key="frame" x="-2" y="-2" width="96" height="26"/>
+                                            <slider verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jpo-P8-bAF">
+                                                <rect key="frame" x="-2" y="-2" width="96" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="92" id="wT0-ht-w4B"/>
                                                 </constraints>

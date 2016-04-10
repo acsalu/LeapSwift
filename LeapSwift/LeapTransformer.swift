@@ -102,14 +102,15 @@ class FingerTransformer: BaseTransformer {
                         
                         if velocity.magnitude <= 20.0 {
                             
-                            newMagnitude = velocity.magnitude * 0.01
+                            newMagnitude = velocity.magnitude * 0.03
                             
                         } else if velocity.magnitude < 200.0 {
-                            
-                            newMagnitude = 2.0 + (velocity.magnitude - 2.0) * 0.05
+                            let accum: Float = 20.0 * 0.03
+                            newMagnitude = accum + (velocity.magnitude - accum) * 0.06
                             
                         } else {
-                            newMagnitude = 11.9 + (velocity.magnitude - 11.9) * 0.1
+                            let accum: Float = 20.0 * 0.03 + (200.0 - 20.0 * 0.03) * 0.06
+                            newMagnitude = accum + (velocity.magnitude - accum) * 0.1
                         }
                         
                         let scale = newMagnitude / velocity.magnitude

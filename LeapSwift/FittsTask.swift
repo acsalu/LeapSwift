@@ -35,6 +35,7 @@ class FittsTask {
             case .End:
                 if let lastTrial = lastTrial {
                     lastTrial.stop()
+                    lastTrial.toTarget.prompted = false 
                 }
                 finish()
             case .None:
